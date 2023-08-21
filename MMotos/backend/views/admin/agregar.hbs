@@ -1,0 +1,31 @@
+<div class="container" style="margin:50px auto">
+    <div class="row">
+        <div class="col-6 offset-3">
+            <h3>Agregar una novedad</h3><hr>
+
+            <form action="/admin/novedades/agregar" method="post" enctype="multipart/form-data">
+                <div class="mb-3 row">
+                    <label for=""><h5>Titulo*:</h5></label>
+                    <input type="text" class="form-control" placeholder="Titulo" name="titulo">
+                </div>
+                <div class="mb-3 row">
+                    <label for=""><h5>Subtitulo*:</h5></label>
+                    <textarea rows="3" type="text" class="form-control" placeholder="Subtitulo" name="subtitulo"></textarea>
+                </div>
+                <div class="mb-3 row">
+                    <label for=""><h5>Cuerpo*:</h5></label>
+                    <textarea rows="7" type="text" class="form-control" placeholder="Cuerpo" name="cuerpo"></textarea>
+                </div>
+                <div class="mb-3 row">
+                    <label for=""><h5>Imagen:</h5></label>
+                    <input type="file" class="form-control" name="imagen" id="imagen" />
+                </div>
+
+                <button type="submit" class="btn btn-primary">Guardar</button>
+            </form>
+            {{#if error}}
+            <h5>{{message}}</h5>
+            {{/if}}
+        </div>
+    </div>
+</div>
