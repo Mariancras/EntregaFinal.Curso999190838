@@ -11,7 +11,7 @@ import HomePage from './pages/HomePage';
 import NosotrosPage from './pages/NosotrosPage';
 import NovedadesPage from './pages/NovedadesPage';
 import GuiasPages from './pages/GuiasPage';
-import TestPages from './pages/TestPage';
+import GaleriaPages from './pages/GaleriaPage';
 import ConcesionarioDigitalPage from './pages/ConcesionarioDigitalPage';
 
 import './App.css'
@@ -29,7 +29,7 @@ function App() {
           <Route path='/novedades' element={<NovedadesPage />} />
           <Route path='/contacto' element={<ContactoPage />} />
           <Route path='/guias' element={<GuiasPages/>}/>
-          <Route path='/test' element= {<TestPages/>}/>
+          <Route path='/galeria' element= {<GaleriaPages/>}/>
           <Route path='/concesionarioDigital' element={<ConcesionarioDigitalPage/>}/>
         </Routes>
 
