@@ -1,14 +1,14 @@
 import React, { useState } from 'react';
 
 const GaleriaPages = (props) => {
-    const [selectedImage, setSelectedImage] = useState(null);
+    const [imagenSeleccionada, setImagenSeleccionada] = useState(null);
 
     const clickEnImagen = (imageSrc) => {
-        setSelectedImage(imageSrc);
+        setImagenSeleccionada(imageSrc);
     };
 
     const cerrarImagen = () => {
-        setSelectedImage(null);
+        setImagenSeleccionada(null);
     };
 
     return (
@@ -25,13 +25,13 @@ const GaleriaPages = (props) => {
                 <img src="img/test/test7.avif" alt="moto test 7" onClick={() => clickEnImagen("img/test/test7.avif")} />
             </section>
 
-            {selectedImage && (
+            {imagenSeleccionada && (
                 <div className="exhibidor">
                     <span className="boton-cerrar" onClick={cerrarImagen}>
                     &times;
                     </span>
                     <img
-                        src={selectedImage}
+                        src={imagenSeleccionada}
                         alt="Imagen seleccionada"
                         onClick={cerrarImagen}
                     />
