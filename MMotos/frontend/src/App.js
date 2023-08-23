@@ -19,7 +19,7 @@ import './App.css'
 
 function App() {
   return (
-    <div ClassName="App">
+    <div className="App">
       <Header />
       <BrowserRouter>
         <Nav />
