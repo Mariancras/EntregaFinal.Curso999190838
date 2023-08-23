@@ -97,16 +97,31 @@ h2 {
 .columnas {
   display: flex;
   justify-content: space-between;
+  flex-wrap: wrap;
 }
 
 .bienvenidos {
-  width: 75%;
+  width: 100%;
   padding-right: 10px;
   box-sizing: border-box;
 }
 
 .testimonios {
-  width: 25%;
+  width: 100%;
+  margin-top: 20px; 
+}
+
+
+@media (min-width: 768px) {
+  /* Estilo para pantallas más grandes, donde los elementos estarán en una fila */
+  .bienvenidos {
+    width: 75%;
+  }
+
+  .testimonios {
+    width: 25%;
+    margin-top: 0; /* Restablece el margen superior cuando los elementos están en una fila */
+  }
 }
 
 article p {
@@ -131,6 +146,30 @@ article p {
   display: block;
   margin-top: 10px;
 }
+
+/*letras dentro del carrusel*/
+
+#carouselExampleCaptions .carousel-caption h5 {
+  
+  color:  #ffffff;
+  font-size: 30px; 
+   /*text-shadow: -1px -1px 0 #ffffff, 1px -1px 0 #ffffff, -1px 1px 0 #ffffff, 1px 1px 0 #ffffff;  utilizo directamente el color blanco en lugar de este borde blanco*/
+  
+}
+#carouselExampleCaptions .carousel-caption p {
+  
+  color:  #ffffff;
+  font-size: 17px; 
+   /*text-shadow: -1px -1px 0 #ffffff, 1px -1px 0 #ffffff, -1px 1px 0 #ffffff, 1px 1px 0 #ffffff;  utilizo directamente el color blanco en lugar de este borde blanco*/
+  
+}
+
+.carousel-caption.d-none.d-md-block {
+  background-color: rgba(0, 0, 0, 0.5); /* Color de fondo negro con opacidad al 70% */
+  padding: 10px; /* Espacio de relleno para el contenido dentro de .carousel-caption */
+}
+
+/*fin de letras dentro del carrusel*/
 
 /* --↑↑↑↑↑↑--Home--↑↑↑↑↑↑--*/
 
@@ -488,13 +527,16 @@ article p {
   background: #a1a1a1;
   list-style-type: none;
   -webkit-font-smoothing: antialiased;
-  /* to stop flickering of text in safari */
+ 
   
   transform-origin: 0% 0%;
-  transform: translate(-100%, 0);
+  transform: translate(-1000%, 0);
   
   transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
+
+  opacity: 1;
 }
+
 
 #menu li
 {
