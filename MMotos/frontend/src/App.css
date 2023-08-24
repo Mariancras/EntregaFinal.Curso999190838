@@ -11,7 +11,9 @@ body {
 }
 
 header {
-  background: radial-gradient(circle farthest-corner at bottom center, #00001a 0%, #000000 50%);
+  
+  border-top: 3px solid #2e64a1;
+  /* background: radial-gradient(circle farthest-corner at bottom center, #0000e1 0%, #000000 50%); */
   padding: 16px 0;
   /*1rem 0*/
 }
@@ -29,7 +31,8 @@ header h1 {
 
 /*---------NAV--------------*/
 nav{
-  background: radial-gradient(circle farthest-corner at bottom center, #00001a 0%, #000000 50%);
+ 
+  /* background: radial-gradient(circle farthest-corner at bottom center, #00001a 0%, #000000 50%); */
 }
 
 
@@ -113,14 +116,13 @@ h2 {
 
 
 @media (min-width: 768px) {
-  /* Estilo para pantallas más grandes, donde los elementos estarán en una fila */
   .bienvenidos {
     width: 75%;
   }
 
   .testimonios {
     width: 25%;
-    margin-top: 0; /* Restablece el margen superior cuando los elementos están en una fila */
+    margin-top: 0; 
   }
 }
 
@@ -165,8 +167,8 @@ article p {
 }
 
 .carousel-caption.d-none.d-md-block {
-  background-color: rgba(0, 0, 0, 0.5); /* Color de fondo negro con opacidad al 70% */
-  padding: 10px; /* Espacio de relleno para el contenido dentro de .carousel-caption */
+  background-color: rgba(0, 0, 0, 0.5); 
+  padding: 10px; 
 }
 
 /*fin de letras dentro del carrusel*/
@@ -405,10 +407,12 @@ article p {
 /*menu hamburguesa*/
 #menuToggle
 {
-  display: block;
+
+  
+   display: block;
   position: relative;
-  top: 0px;
-  left: 50px;
+  top: 2.5px;
+  left: 50px; 
   
   z-index: 10;
   
