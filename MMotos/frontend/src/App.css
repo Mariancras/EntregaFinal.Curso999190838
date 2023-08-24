@@ -11,7 +11,6 @@ body {
 }
 
 header {
-
   border-top: 3px solid #2e64a1;
   background-color: #a1a1a1;
   /* background: radial-gradient(circle farthest-corner at bottom center, #0000e1 0%, #000000 50%); */
@@ -19,8 +18,8 @@ header {
   /*1rem 0*/
   justify-content: space-between;
   display: flex;
-  
-}
+  }
+
 header img {
   max-width:100%;
 }
@@ -45,6 +44,126 @@ header h1 {
 }
 */
 
+/*menu hamburguesa*/
+#menuToggle
+{
+  max-width: fit-content;
+  display: block;
+  position: relative;
+  top: 2.5px;
+  left: 50px;
+  z-index: 10;
+  -webkit-user-select: none;
+  user-select: none;
+}
+
+/* estilo de las opciones*/
+#menuToggle a {
+  text-decoration: none;
+  color: #232323;
+  transition: color 0.3s ease;
+}
+
+#menuToggle a:hover {
+  color: #2e64a1;
+}
+
+/*estilo del check que habilita y deshabilita el menu realmente */
+#menuToggle input {
+  display: block;
+  width: 40px;
+  height: 32px;
+  position: absolute;
+  top: -7px;
+  left: -5px;
+  cursor: pointer;
+  opacity: 0; 
+  z-index: 2;  
+  -webkit-touch-callout: none;
+}
+
+/* Estilos de las 3 lineas de la hamburguesa */
+#menuToggle span {
+  display: block;
+  width: 33px;
+  height: 4px;
+  margin-bottom: 5px;
+  position: relative;
+
+  background: #cdcdcd;
+  border-radius: 3px;
+
+  border-color: #000000;
+  z-index: 1;
+
+  transform-origin: 4px 0px;
+
+  transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1.0),
+    background 0.5s cubic-bezier(0.77, 0.2, 0.05, 1.0),
+    opacity 0.55s ease;
+}
+
+#menuToggle span:first-child {
+  transform-origin: 0% 0%;
+}
+
+#menuToggle span:nth-last-child(2) {
+  transform-origin: 0% 100%;
+}
+
+/* transformo de hamburguesa en X*/
+
+/*primer linea*/
+#menuToggle input:checked~span {
+  opacity: 1;
+  transform: rotate(45deg) translate(-2px, -1px);
+  background: #232323;
+}
+
+/*  segunda linea  */
+#menuToggle input:checked~span:nth-last-child(3) {
+  opacity: 0;
+  transform: rotate(0deg) scale(0.2, 0.2);
+}
+
+/*  tercera linea  */
+#menuToggle input:checked~span:nth-last-child(2) {
+  transform: rotate(-45deg) translate(0, -1px);
+}
+
+/* aparecer al tildar el menu */
+ #menuToggle input:checked~ul {
+  transform: none;
+} /* con el ~ selecciono a todos los ul adyacentes al checked*/
+
+/*posicion del menu*/ 
+#menu {
+  position: absolute;
+  margin: -70px 0 0 -50px;
+  padding: 40px;
+  padding-top: 80px;
+  /* width: 300px;
+  margin: -100px 0 0 -50px;
+  padding: 50px;
+  padding-top: 125px; tamaño extragrande */
+
+  background: #a1a1a1;
+  list-style-type: none;
+  -webkit-font-smoothing: antialiased;
+
+
+  transform-origin: 0% 0%;
+  transform: translate(-1000%, 0);
+
+  transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1.0);
+
+  opacity: 1;
+}
+#menu li {
+  padding: 10px 0;
+  font-size: 22px;
+}
+/*fin posicion m enu*/
 
 
 
@@ -68,6 +187,8 @@ nav ul li a.activo::before {
 }
 
 /* fin de flecha en la seccion activa */
+
+/* fin del menu hamburguesa (al fin!)*/
 
 
 
@@ -160,8 +281,7 @@ article p {
 }
 
 
-/*
-tamaño del carrusel*/
+/*tamaño del carrusel*/
 #carouselExampleCaptions img{
   width: 100%;
   max-height: 350px;
@@ -319,10 +439,9 @@ tamaño del carrusel*/
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.7);
-  /* Fondo semitransparente */
-  z-index: 1000;
-  /* Coloca el modal por encima de todo */
+  background-color: rgba(0, 0, 0, 0.7); /* Fondo semitransparente */
+  z-index: 1000; /* modal por encima de todo */
+  
   justify-content: center;
   align-items: center;
 }
@@ -330,10 +449,8 @@ tamaño del carrusel*/
 /* Estilo para la imagen del exhibidor */
 .exhibidor img {
   max-width: 90%;
-  /* Tamaño máximo de la imagen */
-  max-height: 90vh;
-  /* Tamaño máximo de la imagen */
-  cursor: pointer;
+    max-height: 90vh;
+    cursor: pointer;
 }
 
 /* Estilo para el botón de cerrar del exhibidor */
@@ -423,147 +540,7 @@ tamaño del carrusel*/
 
 
 
-/*menu hamburguesa*/
-#menuToggle
-{
 
-  max-width: fit-content;
-  display: block;
-  position: relative;
-  top: 2.5px;
-  left: 50px;
-
-  z-index: 10;
-
-  -webkit-user-select: none;
-  user-select: none;
-}
-
-#menuToggle a {
-  text-decoration: none;
-  color: #232323;
-
-  transition: color 0.3s ease;
-}
-
-#menuToggle a:hover {
-  color: #2e64a1;
-}
-
-
-#menuToggle input {
-  display: block;
-  width: 40px;
-  height: 32px;
-  position: absolute;
-  top: -7px;
-  left: -5px;
-
-  cursor: pointer;
-
-  opacity: 0;
-  /* hide this */
-  z-index: 2;
-  /* and place it over the hamburger */
-
-  -webkit-touch-callout: none;
-}
-
-/*
- * Just a quick hamburger
- */
-#menuToggle span {
-  display: block;
-  width: 33px;
-  height: 4px;
-  margin-bottom: 5px;
-  position: relative;
-
-  background: #cdcdcd;
-  border-radius: 3px;
-
-  border-color: #000000;
-  z-index: 1;
-
-  transform-origin: 4px 0px;
-
-  transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1.0),
-    background 0.5s cubic-bezier(0.77, 0.2, 0.05, 1.0),
-    opacity 0.55s ease;
-}
-
-#menuToggle span:first-child {
-  transform-origin: 0% 0%;
-}
-
-#menuToggle span:nth-last-child(2) {
-  transform-origin: 0% 100%;
-}
-
-/* 
- * Transform all the slices of hamburger
- * into a crossmark.
- */
-#menuToggle input:checked~span {
-  opacity: 1;
-  transform: rotate(45deg) translate(-2px, -1px);
-  background: #232323;
-}
-
-/*
- * But let's hide the middle one.
- */
-#menuToggle input:checked~span:nth-last-child(3) {
-  opacity: 0;
-  transform: rotate(0deg) scale(0.2, 0.2);
-}
-
-/*
- * Ohyeah and the last one should go the other direction
- */
-#menuToggle input:checked~span:nth-last-child(2) {
-  transform: rotate(-45deg) translate(0, -1px);
-}
-
-/*
- * Make this absolute positioned
- * at the top left of the screen
- */
-#menu {
-  position: absolute;
-  margin: -70px 0 0 -50px;
-  padding: 40px;
-  padding-top: 80px;
-  /* width: 300px;
-  margin: -100px 0 0 -50px;
-  padding: 50px;
-  padding-top: 125px; tamaño extragrande */
-
-  background: #a1a1a1;
-  list-style-type: none;
-  -webkit-font-smoothing: antialiased;
-
-
-  transform-origin: 0% 0%;
-  transform: translate(-1000%, 0);
-
-  transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1.0);
-
-  opacity: 1;
-}
-
-
-#menu li {
-  padding: 10px 0;
-  font-size: 22px;
-}
-
-/*
- * And let's slide it in from the left
- */
-#menuToggle input:checked~ul {
-  transform: none;
-}
 
 
 .whatsapp {
