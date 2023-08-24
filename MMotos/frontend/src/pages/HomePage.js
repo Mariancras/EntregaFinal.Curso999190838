@@ -6,7 +6,7 @@ const HomePage = (props) => {
         <main>
             {/* <img className="banner" src="img/yamaha-yzf-r3.jpg" alt="yamaha r3 2020" /> */}
 
-
+            {/*carousel de bootstrap 5.3.1. adaptado para que solo comience a rotar imagenes si desplazo la primera*/}
             <div id="carouselExampleCaptions" className="carousel slide" data-bs-ride="true">
                 <div className="carousel-indicators">
                     <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" className="active" aria-current="true" aria-label="Slide 1"></button>
@@ -15,21 +15,21 @@ const HomePage = (props) => {
                 </div>
                 <div className="carousel-inner">
                     <div className="carousel-item active">
-                        <img src="img/carrusel/Carrusel 1.png" className="d-block w-100" alt="..." />
+                        <img src="img/carrusel/Carrusel 1.png" className="d-block w-100" alt="bmw s1000rr" />
                         <div className="carousel-caption d-none d-md-block">
                             <h5>La entendemos mejor:</h5>
                             <p>Bienvenido a TU sitio de motos</p>
                         </div>
                     </div>
                     <div className="carousel-item">
-                        <img src="img/carrusel/Carrusel 2.png" className="d-block w-100" alt="..." />
+                        <img src="img/carrusel/Carrusel 2.png" className="d-block w-100" alt="moto pista en desierto" />
                         <div className="carousel-caption d-none d-md-block">
                             <h5>Te entendemos mejor!</h5>
                             <p>Sabemos lo que te gusta, porque es lo mismo que a nosotros.</p>
                         </div>
                     </div>
                     <div className="carousel-item">
-                        <img src="img/carrusel/Carrusel 3.png" className="d-block w-100" alt="..." />
+                        <img src="img/carrusel/Carrusel 3.png" className="d-block w-100" alt="ducati panigale" />
                         <div className="carousel-caption d-none d-md-block">
                             <h5>La soñamos mejor</h5>
                             <p>Busca nuestras guías, galería y concesionario online!</p>
@@ -45,6 +45,8 @@ const HomePage = (props) => {
                     <span className="visually-hidden">Next</span>
                 </button>
             </div>
+            {/*fin del carrusel de bootstrap*/}
+
             <div className="holder">
             <div className="columnas">
                 <section className="bienvenidos">

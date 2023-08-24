@@ -45,7 +45,7 @@ header h1 {
 */
 
 /*menu hamburguesa*/
-#menuToggle
+#menuHamburguesa
 {
   max-width: fit-content;
   display: block;
@@ -58,18 +58,18 @@ header h1 {
 }
 
 /* estilo de las opciones*/
-#menuToggle a {
+#menuHamburguesa a {
   text-decoration: none;
   color: #232323;
   transition: color 0.3s ease;
 }
 
-#menuToggle a:hover {
+#menuHamburguesa a:hover {
   color: #2e64a1;
 }
 
 /*estilo del check que habilita y deshabilita el menu realmente */
-#menuToggle input {
+#menuHamburguesa input {
   display: block;
   width: 40px;
   height: 32px;
@@ -83,7 +83,7 @@ header h1 {
 }
 
 /* Estilos de las 3 lineas de la hamburguesa */
-#menuToggle span {
+#menuHamburguesa span {
   display: block;
   width: 33px;
   height: 4px;
@@ -103,36 +103,36 @@ header h1 {
     opacity 0.55s ease;
 }
 
-#menuToggle span:first-child {
+#menuHamburguesa span:first-child {
   transform-origin: 0% 0%;
 }
 
-#menuToggle span:nth-last-child(2) {
+#menuHamburguesa span:nth-last-child(2) {
   transform-origin: 0% 100%;
 }
 
 /* transformo de hamburguesa en X*/
 
 /*primer linea*/
-#menuToggle input:checked~span {
+#menuHamburguesa input:checked~span {
   opacity: 1;
   transform: rotate(45deg) translate(-2px, -1px);
   background: #232323;
 }
 
 /*  segunda linea  */
-#menuToggle input:checked~span:nth-last-child(3) {
+#menuHamburguesa input:checked~span:nth-last-child(3) {
   opacity: 0;
   transform: rotate(0deg) scale(0.2, 0.2);
 }
 
 /*  tercera linea  */
-#menuToggle input:checked~span:nth-last-child(2) {
+#menuHamburguesa input:checked~span:nth-last-child(2) {
   transform: rotate(-45deg) translate(0, -1px);
 }
 
 /* aparecer al tildar el menu */
- #menuToggle input:checked~ul {
+ #menuHamburguesa input:checked~ul {
   transform: none;
 } /* con el ~ selecciono a todos los ul adyacentes al checked*/
 

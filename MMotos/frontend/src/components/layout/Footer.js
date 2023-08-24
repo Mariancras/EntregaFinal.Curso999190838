@@ -10,3 +10,4 @@ const Footer = (props) => {
 }
 
 export default Footer;
+/*el icono de WA abre automaticamente la App y se le agrego rel="noreferrer"  para hacerlo ams seguro en navegadores antiguos */

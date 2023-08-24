@@ -18,8 +18,8 @@ const Nav = (props) => {
     
     return (
         <div className="holder">
-            <nav role="navigation">
-                <div id="menuToggle">
+            <nav>
+                <div id="menuHamburguesa">
                     <input type="checkbox" checked={menuAbierto} onChange={alternarMenu} />
 
                     <span></span>
