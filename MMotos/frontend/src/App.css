@@ -11,7 +11,7 @@ body {
 }
 
 header {
-  
+
   border-top: 3px solid #2e64a1;
   background-color: #a1a1a1;
   /* background: radial-gradient(circle farthest-corner at bottom center, #0000e1 0%, #000000 50%); */
@@ -40,10 +40,8 @@ header h1 {
 
 
 /*---------NAV--------------*/
-
-.navigation{
-  max-width: 80%;
-  display: flex;
+nav{
+   /* background: radial-gradient(circle farthest-corner at bottom center, #00001a 0%, #000000 50%); */
 }
 
 
@@ -52,20 +50,21 @@ header h1 {
 
 /* flecha en la seccion activa  */
 nav ul li a.activo {
-    position: relative;
+  position: relative;
 }
+
 /* Estilo para la flecha*/
 nav ul li a.activo::before {
   content: '';
   position: absolute;
-  top: 50%; 
-  right: -15px; 
+  top: 50%;
+  right: -15px;
   width: 0;
   height: 0;
-  border-top: 8px solid transparent; 
-  border-right: 8px solid black; 
+  border-top: 8px solid transparent;
+  border-right: 8px solid black;
   border-bottom: 8px solid transparent;
-  transform: translateY(-50%); 
+  transform: translateY(-50%);
 }
 
 /* fin de flecha en la seccion activa */
@@ -93,7 +92,7 @@ footer {
 .banner {
   width: 100%;
   height: 150px;
-  object-fit:cover;
+  object-fit: cover;
   object-position: 0 50%;
 }
 
@@ -122,7 +121,7 @@ h2 {
 
 .testimonios {
   width: 100%;
-  margin-top: 20px; 
+  margin-top: 20px;
 }
 
 
@@ -133,7 +132,7 @@ h2 {
 
   .testimonios {
     width: 25%;
-    margin-top: 0; 
+    margin-top: 0;
   }
 }
 
@@ -173,16 +172,17 @@ tamaño del carrusel*/
 #carouselExampleCaptions .carousel-caption h5 {
   
   color:  #ffffff;
-  font-size: 25px; 
+  font-size: 30px; 
    /*text-shadow: -1px -1px 0 #ffffff, 1px -1px 0 #ffffff, -1px 1px 0 #ffffff, 1px 1px 0 #ffffff;  utilizo directamente el color blanco en lugar de este borde blanco*/
   
 }
+
 #carouselExampleCaptions .carousel-caption p {
-  
-  color:  #ffffff;
-  font-size: 17px; 
-   /*text-shadow: -1px -1px 0 #ffffff, 1px -1px 0 #ffffff, -1px 1px 0 #ffffff, 1px 1px 0 #ffffff;  utilizo directamente el color blanco en lugar de este borde blanco*/
-  
+
+  color: #ffffff;
+  font-size: 17px;
+  /*text-shadow: -1px -1px 0 #ffffff, 1px -1px 0 #ffffff, -1px 1px 0 #ffffff, 1px 1px 0 #ffffff;  utilizo directamente el color blanco en lugar de este borde blanco*/
+
 }
 /* sombreado detras de las letras*/
 .carousel-caption.d-none.d-md-block {
@@ -289,15 +289,11 @@ tamaño del carrusel*/
 /* --↓↓↓↓↓↓--Galeria--↓↓↓↓↓↓--*/
 .galeria {
   display: grid;
-  grid-template-columns: repeat(
-    auto-fit,
-    minmax(
-      250px,
-      1fr
-    )
-  );
+  grid-template-columns: repeat(auto-fit,
+      minmax(250px,
+        1fr));
   gap: 16px;
-    /* display: flex;
+  /* display: flex;
   flex-wrap: wrap;
   justify-content: flex-start; */
 }
@@ -307,7 +303,7 @@ tamaño del carrusel*/
   height: 250px;
   border: 1px solid #ddd;
   padding: 0.3em;
-  object-fit:cover;
+  object-fit: cover;
   box-sizing: border-box;
   cursor: pointer;
   /* margin-bottom: 20px;
@@ -323,16 +319,20 @@ tamaño del carrusel*/
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.7); /* Fondo semitransparente */
-  z-index: 1000; /* Coloca el modal por encima de todo */
+  background-color: rgba(0, 0, 0, 0.7);
+  /* Fondo semitransparente */
+  z-index: 1000;
+  /* Coloca el modal por encima de todo */
   justify-content: center;
   align-items: center;
 }
 
 /* Estilo para la imagen del exhibidor */
 .exhibidor img {
-  max-width: 90%; /* Tamaño máximo de la imagen */
-  max-height: 90vh; /* Tamaño máximo de la imagen */
+  max-width: 90%;
+  /* Tamaño máximo de la imagen */
+  max-height: 90vh;
+  /* Tamaño máximo de la imagen */
   cursor: pointer;
 }
 
@@ -426,80 +426,77 @@ tamaño del carrusel*/
 /*menu hamburguesa*/
 #menuToggle
 {
+
   max-width: fit-content;
   display: block;
   position: relative;
   top: 2.5px;
-  left: 50px; 
-  
+  left: 50px;
+
   z-index: 10;
-  
+
   -webkit-user-select: none;
   user-select: none;
 }
 
-#menuToggle a
-{
+#menuToggle a {
   text-decoration: none;
   color: #232323;
-  
+
   transition: color 0.3s ease;
 }
 
-#menuToggle a:hover
-{
+#menuToggle a:hover {
   color: #2e64a1;
 }
 
 
-#menuToggle input
-{
+#menuToggle input {
   display: block;
   width: 40px;
   height: 32px;
   position: absolute;
   top: -7px;
   left: -5px;
-  
+
   cursor: pointer;
-  
-  opacity: 0; /* hide this */
-  z-index: 2; /* and place it over the hamburger */
-  
+
+  opacity: 0;
+  /* hide this */
+  z-index: 2;
+  /* and place it over the hamburger */
+
   -webkit-touch-callout: none;
 }
 
 /*
  * Just a quick hamburger
  */
-#menuToggle span
-{
+#menuToggle span {
   display: block;
   width: 33px;
   height: 4px;
   margin-bottom: 5px;
   position: relative;
-  
+
   background: #cdcdcd;
   border-radius: 3px;
-  
+
   border-color: #000000;
   z-index: 1;
-  
+
   transform-origin: 4px 0px;
-  
-  transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
-              background 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
-              opacity 0.55s ease;
+
+  transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1.0),
+    background 0.5s cubic-bezier(0.77, 0.2, 0.05, 1.0),
+    opacity 0.55s ease;
 }
 
-#menuToggle span:first-child
-{
+#menuToggle span:first-child {
   transform-origin: 0% 0%;
 }
 
-#menuToggle span:nth-last-child(2)
-{
+#menuToggle span:nth-last-child(2) {
   transform-origin: 0% 100%;
 }
 
@@ -507,8 +504,7 @@ tamaño del carrusel*/
  * Transform all the slices of hamburger
  * into a crossmark.
  */
-#menuToggle input:checked ~ span
-{
+#menuToggle input:checked~span {
   opacity: 1;
   transform: rotate(45deg) translate(-2px, -1px);
   background: #232323;
@@ -517,8 +513,7 @@ tamaño del carrusel*/
 /*
  * But let's hide the middle one.
  */
-#menuToggle input:checked ~ span:nth-last-child(3)
-{
+#menuToggle input:checked~span:nth-last-child(3) {
   opacity: 0;
   transform: rotate(0deg) scale(0.2, 0.2);
 }
@@ -526,8 +521,7 @@ tamaño del carrusel*/
 /*
  * Ohyeah and the last one should go the other direction
  */
-#menuToggle input:checked ~ span:nth-last-child(2)
-{
+#menuToggle input:checked~span:nth-last-child(2) {
   transform: rotate(-45deg) translate(0, -1px);
 }
 
@@ -535,8 +529,7 @@ tamaño del carrusel*/
  * Make this absolute positioned
  * at the top left of the screen
  */
-#menu
-{
+#menu {
   position: absolute;
   margin: -70px 0 0 -50px;
   padding: 40px;
@@ -545,23 +538,22 @@ tamaño del carrusel*/
   margin: -100px 0 0 -50px;
   padding: 50px;
   padding-top: 125px; tamaño extragrande */
-  
+
   background: #a1a1a1;
   list-style-type: none;
   -webkit-font-smoothing: antialiased;
- 
-  
+
+
   transform-origin: 0% 0%;
   transform: translate(-1000%, 0);
-  
-  transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
+
+  transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1.0);
 
   opacity: 1;
 }
 
 
-#menu li
-{
+#menu li {
   padding: 10px 0;
   font-size: 22px;
 }
@@ -569,8 +561,7 @@ tamaño del carrusel*/
 /*
  * And let's slide it in from the left
  */
-#menuToggle input:checked ~ ul
-{
+#menuToggle input:checked~ul {
   transform: none;
 }
 
