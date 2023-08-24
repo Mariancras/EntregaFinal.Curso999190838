@@ -4,10 +4,6 @@ import {
 } from 'react-router-dom';
 
 
-
-
-
-
 const Nav = (props) => {
     const [menuAbierto, setmenuAbierto] = useState(false);
 

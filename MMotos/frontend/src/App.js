@@ -33,9 +33,9 @@ function App() {
           <Route path='/galeria' element= {<GaleriaPages/>}/>
           <Route path='/concesionarioDigital' element={<ConcesionarioDigitalPage/>}/>
         </Routes>
-
+        
       </BrowserRouter>
-
+      
       <Footer />
     </div>
   );
