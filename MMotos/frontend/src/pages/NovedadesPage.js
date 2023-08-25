@@ -20,7 +20,7 @@ const NovedadesPage = (props) => {
 
     return(
         <section className="holder">
-            <h2>Noticias</h2>
+            <div className='noticias'><h2>Noticias</h2><hr/></div>
             {loading ? (
                 <p>Cargando...</p>
             ) : (

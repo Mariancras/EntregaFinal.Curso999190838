@@ -29,7 +29,7 @@ const Nav = (props) => {
                     <ul id="menu">
                         <li><NavLink to="/" className={({ isActive }) => isActive ? "activo" : undefined} onClick={cerrarMenu}>Home</NavLink></li>
                         <li><NavLink to="/ConcesionarioDigital" className={({ isActive }) => isActive ? "activo" : undefined} onClick={cerrarMenu}>Concesionario Digital</NavLink></li>
-                        <li><NavLink to="/novedades" className={({ isActive }) => isActive ? "activo" : undefined} onClick={cerrarMenu}>Novedades</NavLink></li>
+                        <li><NavLink to="/novedades" className={({ isActive }) => isActive ? "activo" : undefined} onClick={cerrarMenu}>Noticias</NavLink></li>
                         <li><NavLink to="/guias" className={({ isActive }) => isActive ? "activo" : undefined} onClick={cerrarMenu}>Guias</NavLink></li >
                         <li><NavLink to="/galeria" className={({ isActive }) => isActive ? "activo" : undefined} onClick={cerrarMenu}>Galeria</NavLink></li >
                         <li><NavLink to="/nosotros" className={({ isActive }) => isActive ? "activo" : undefined} onClick={cerrarMenu}>Nosotros</NavLink></li>

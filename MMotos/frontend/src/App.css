@@ -195,6 +195,7 @@ nav ul li a.activo::before {
 /*---------FIN DEL NAV--------------*/
 
 
+
 footer {
   background-color: #242424;
   clear: both;
@@ -224,6 +225,7 @@ h2 {
 
 
 /* --↑↑↑↑↑↑--Ajustes generales--↑↑↑↑↑↑--*/
+
 
 
 /* --↓↓↓↓↓↓--Home--↓↓↓↓↓↓--*/
@@ -314,6 +316,8 @@ article p {
 
 /* --↑↑↑↑↑↑--Home--↑↑↑↑↑↑--*/
 
+
+
 /* --↓↓↓↓↓↓--Nosotros--↓↓↓↓↓↓--*/
 .historia p {
   font-size: 14px;
@@ -362,6 +366,9 @@ article p {
 }
 
 /* --↑↑↑↑↑↑--Nosotros--↑↑↑↑↑↑--*/
+
+
+
 
 /* --↓↓↓↓↓↓--Guías--↓↓↓↓↓↓--*/
 .servicio {
@@ -467,6 +474,8 @@ article p {
 /* --↑↑↑↑↑↑--Galeria--↑↑↑↑↑↑--*/
 
 
+
+
 /* --↓↓↓↓↓↓--Contacto--↓↓↓↓↓↓--*/
 .contacto {
   display: flex;
@@ -536,9 +545,36 @@ article p {
   background-color: #2e64a1;
 }
 
+
+
 /* --↑↑↑↑↑↑--Contacto--↑↑↑↑↑↑--*/
 
+/*------------Novedades------*/
 
+/*.novedades{
+  
+}
+
+.novedades img{
+  
+}*/
+
+.novedades h2{
+  font-size: 30px;
+}
+
+.novedades h3{
+  font-size: 20px;
+}
+
+.noticias{
+  padding-top: 10px;
+}
+.noticias h2{
+  font-size: 35px;
+}
+
+/*-----fin de novedades-----*/
 
 
 

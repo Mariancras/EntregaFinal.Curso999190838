@@ -49,7 +49,7 @@ router.post('/contacto', async (req, res) => {
     
     res.status(201).json({
         error: false,
-        message: 'Mensaje enviado'
+        message: 'Mensaje enviado 😃 🏍️'
     });
 
 
