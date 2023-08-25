@@ -10,6 +10,8 @@ body {
   box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.5);
 }
 
+
+/*---------HEADER-------------*/
 header {
   border-top: 3px solid #2e64a1;
   background-color: #a1a1a1;
@@ -18,10 +20,10 @@ header {
   /*1rem 0*/
   justify-content: space-between;
   display: flex;
-  }
+}
 
 header img {
-  max-width:100%;
+  max-width: 100%;
 }
 
 /*
@@ -37,6 +39,105 @@ header h1 {
 } desactivo por usando un banner con letra*/
 
 
+/*popups redes*/
+
+.contenedorRedes {
+  position: relative;
+  z-index: 1;
+  display: inline-flex;
+  list-style: none;
+
+
+}
+
+
+
+.contenedorRedes .iconito {
+
+  position: relative;
+  background: #ffffff;
+  border-radius: 50%;
+  padding: 15px;
+  margin: 10px;
+  width: 50px;
+  height: 50px;
+  font-size: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  transition: all 0.2s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.contenedorRedes .tooltip {
+  position: absolute;
+  top: 0;
+  font-size: 14px;
+  background: #ffffff;
+  color: #ffffff;
+  padding: 5px 8px;
+  border-radius: 5px;
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+  opacity: 0;
+  pointer-events: none;
+  transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.contenedorRedes .tooltip::before {
+  position: absolute;
+  content: "";
+  height: 8px;
+  width: 8px;
+  background: #ffffff;
+  bottom: -3px;
+  left: 50%;
+  transform: translate(-50%) rotate(45deg);
+  transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.contenedorRedes .iconito:hover .tooltip {
+  top: -45px;
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+}
+
+.contenedorRedes .iconito:hover span,
+.contenedorRedes .iconito:hover .tooltip {
+  text-shadow: 0px -1px 0px rgba(0, 0, 0, 0.1);
+}
+
+.contenedorRedes .facebook:hover,
+.contenedorRedes .facebook:hover .tooltip,
+.contenedorRedes .facebook:hover .tooltip::before {
+  background: #1877F2;
+  color: #ffffff;
+}
+
+.contenedorRedes .twitter:hover,
+.contenedorRedes .twitter:hover .tooltip,
+.contenedorRedes .twitter:hover .tooltip::before {
+  background: #1DA1F2;
+  color: #ffffff;
+}
+
+.contenedorRedes .instagram:hover,
+.contenedorRedes .instagram:hover .tooltip,
+.contenedorRedes .instagram:hover .tooltip::before {
+  background: #E4405F;
+  color: #ffffff;
+}
+
+.fab {
+  color: #000000;
+}
+
+/*fin popup redes*/
+
+/*---------Fin del HEADER-------------*/
+
 
 /*---------NAV--------------*/
 /*nav{
@@ -45,8 +146,7 @@ header h1 {
 */
 
 /*menu hamburguesa*/
-#menuHamburguesa
-{
+#menuHamburguesa {
   max-width: fit-content;
   display: block;
   position: relative;
@@ -77,8 +177,8 @@ header h1 {
   top: -7px;
   left: -5px;
   cursor: pointer;
-  opacity: 0; 
-  z-index: 2;  
+  opacity: 0;
+  z-index: 2;
   -webkit-touch-callout: none;
 }
 
@@ -132,11 +232,13 @@ header h1 {
 }
 
 /* aparecer al tildar el menu */
- #menuHamburguesa input:checked~ul {
+#menuHamburguesa input:checked~ul {
   transform: none;
-} /* con el ~ selecciono a todos los ul adyacentes al checked*/
+}
 
-/*posicion del menu*/ 
+/* con el ~ selecciono a todos los ul adyacentes al checked*/
+
+/*posicion del menu*/
 #menu {
   position: absolute;
   margin: -70px 0 0 -50px;
@@ -159,10 +261,12 @@ header h1 {
 
   opacity: 1;
 }
+
 #menu li {
   padding: 10px 0;
   font-size: 22px;
 }
+
 /*fin posicion m enu*/
 
 
@@ -208,7 +312,7 @@ footer {
 .holder {
   max-width: 960px;
   margin: 0 auto;
-  
+
 }
 
 .banner {
@@ -284,19 +388,20 @@ article p {
 
 
 /*tamaño del carrusel*/
-#carouselExampleCaptions img{
+#carouselExampleCaptions img {
   width: 100%;
   max-height: 350px;
-  object-fit:cover;  
+  object-fit: cover;
 }
+
 /*letras dentro del carrusel*/
 
 #carouselExampleCaptions .carousel-caption h5 {
-  
-  color:  #ffffff;
-  font-size: 30px; 
-   /*text-shadow: -1px -1px 0 #ffffff, 1px -1px 0 #ffffff, -1px 1px 0 #ffffff, 1px 1px 0 #ffffff;  utilizo directamente el color blanco en lugar de este borde blanco*/
-  
+
+  color: #ffffff;
+  font-size: 30px;
+  /*text-shadow: -1px -1px 0 #ffffff, 1px -1px 0 #ffffff, -1px 1px 0 #ffffff, 1px 1px 0 #ffffff;  utilizo directamente el color blanco en lugar de este borde blanco*/
+
 }
 
 #carouselExampleCaptions .carousel-caption p {
@@ -306,10 +411,11 @@ article p {
   /*text-shadow: -1px -1px 0 #ffffff, 1px -1px 0 #ffffff, -1px 1px 0 #ffffff, 1px 1px 0 #ffffff;  utilizo directamente el color blanco en lugar de este borde blanco*/
 
 }
+
 /* sombreado detras de las letras*/
 .carousel-caption.d-none.d-md-block {
-  background-color: rgba(0, 0, 0, 0.7); 
-  padding: 10px; 
+  background-color: rgba(0, 0, 0, 0.7);
+  padding: 10px;
 }
 
 /*fin de letras dentro del carrusel*/
@@ -323,19 +429,46 @@ article p {
   font-size: 14px;
 }
 
-.personas {
-  display: flex;
-  justify-content: space-between;
+.historia h2 {
+  text-align: center;
 }
+
+.staff h2 {
+  text-align: center;
+}
+
+.personas {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  justify-items: center;
+  justify-content: space-between;
+  gap: 15px;
+}
+
 
 .persona {
   border: 1px solid #ccc;
   border-radius: 5px;
-  width: 18%;
+
   text-align: center;
   padding: 13px;
   box-sizing: border-box;
+
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
+  transition: background-color 0.3s, box-shadow 0.3s;
+
+  align-content: center;
+  justify-content: center;
 }
+
+
+
+.persona:hover {
+  background-color: #fff;
+  box-shadow: 0 0 15px rgba(255, 255, 255, 0.5);
+  cursor: pointer;
+}
+
 
 .persona img {
   border-radius: 50%;
@@ -446,9 +579,11 @@ article p {
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.7); /* Fondo semitransparente */
-  z-index: 1000; /* modal por encima de todo */
+  background-color: rgba(0, 0, 0, 0.7);
   
+  z-index: 1000;
+ 
+
   justify-content: center;
   align-items: center;
 }
@@ -456,8 +591,8 @@ article p {
 /* Estilo para la imagen del exhibidor */
 .exhibidor img {
   max-width: 90%;
-    max-height: 90vh;
-    cursor: pointer;
+  max-height: 90vh;
+  cursor: pointer;
 }
 
 /* Estilo para el botón de cerrar del exhibidor */
@@ -559,18 +694,19 @@ article p {
   
 }*/
 
-.novedades h2{
+.novedades h2 {
   font-size: 30px;
 }
 
-.novedades h3{
+.novedades h3 {
   font-size: 20px;
 }
 
-.noticias{
+.noticias {
   padding-top: 10px;
 }
-.noticias h2{
+
+.noticias h2 {
   font-size: 35px;
 }
 
@@ -580,131 +716,21 @@ article p {
 
 
 .whatsapp {
-  position:fixed;
-  width:60px;
-  height:60px;
-  bottom:40px;
-  right:40px;
-  background-color:#25d366;
-  color:#FFF;
-  border-radius:50px;
-  text-align:center;
-  font-size:30px;
-  z-index:100;
+  position: fixed;
+  width: 60px;
+  height: 60px;
+  bottom: 40px;
+  right: 40px;
+  background-color: #25d366;
+  color: #FFF;
+  border-radius: 50px;
+  text-align: center;
+  font-size: 30px;
+  z-index: 100;
 }
 
-.whatsapp-icon {
-  margin-top:13px;
-}
-
-
-/*popups redes*/
-@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
-
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-*:focus,
-*:active {
-  outline: none !important;
-  -webkit-tap-highlight-color: transparent;
+.whatsapp-iconito {
+  margin-top: 13px;
 }
 
 
-.wrapper {
-  position: relative;
-  z-index: 1;
-  display: inline-flex;
-  list-style: none;
-
-  
-}
-
-
-
-.wrapper .icon {
-  
-  position: relative;
-  background: #ffffff;
-  border-radius: 50%;
-  padding: 15px;
-  margin: 10px;
-  width: 50px;
-  height: 50px;
-  font-size: 20px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
-  cursor: pointer;
-  transition: all 0.2s cubic-bezier(0.68, -0.55, 0.265, 1.55);
-}
-
-.wrapper .tooltip {
-  position: absolute;
-  top: 0;
-  font-size: 14px;
-  background: #ffffff;
-  color: #ffffff;
-  padding: 5px 8px;
-  border-radius: 5px;
-  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
-  opacity: 0;
-  pointer-events: none;
-  transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
-}
-
-.wrapper .tooltip::before {
-  position: absolute;
-  content: "";
-  height: 8px;
-  width: 8px;
-  background: #ffffff;
-  bottom: -3px;
-  left: 50%;
-  transform: translate(-50%) rotate(45deg);
-  transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
-}
-
-.wrapper .icon:hover .tooltip {
-  top: -45px;
-  opacity: 1;
-  visibility: visible;
-  pointer-events: auto;
-}
-
-.wrapper .icon:hover span,
-.wrapper .icon:hover .tooltip {
-  text-shadow: 0px -1px 0px rgba(0, 0, 0, 0.1);
-}
-
-.wrapper .facebook:hover,
-.wrapper .facebook:hover .tooltip,
-.wrapper .facebook:hover .tooltip::before {
-  background: #1877F2;
-  color: #ffffff;
-}
-
-.wrapper .twitter:hover,
-.wrapper .twitter:hover .tooltip,
-.wrapper .twitter:hover .tooltip::before {
-  background: #1DA1F2;
-  color: #ffffff;
-}
-
-.wrapper .instagram:hover,
-.wrapper .instagram:hover .tooltip,
-.wrapper .instagram:hover .tooltip::before {
-  background: #E4405F;
-  color: #ffffff;
-}
-
-.fab{
-  color: #000000;
-}
-
-/*fin popup redes*/

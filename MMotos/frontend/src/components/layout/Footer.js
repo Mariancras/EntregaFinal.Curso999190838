@@ -4,7 +4,7 @@ const Footer = (props) => {
     return (
         <footer>
             <p>Derechos reservados. MMotos 2023</p>
-            <a href="https://wa.me/+5491162897255?text=Me%20gustaría%20saber%20mas%20sobre%20esta%20moto" className="whatsapp" target="_blank" rel="noreferrer"> <i className="fa fa-whatsapp whatsapp-icon"></i></a>
+            <a href="https://wa.me/+5491162897255?text=Me%20gustaría%20saber%20mas%20sobre%20esta%20moto" className="whatsapp" target="_blank" rel="noreferrer"> <i className="fa fa-whatsapp whatsapp-iconito"></i></a>
         </footer>
     );
 }

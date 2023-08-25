@@ -5,16 +5,16 @@ const Header = (props) => {
         <header>
             <div className="holder">
                 <img src="img/headder.png" alt='MMotos' />
-                <ul className="wrapper">
-                    <li className="icon facebook">
+                <ul className="contenedorRedes">
+                    <li className="iconito facebook">
                         <span className="tooltip">Facebook</span>
                         <span><i className="fab fa-facebook-f"></i></span>
                     </li>
-                    <li className="icon twitter">
+                    <li className="iconito twitter">
                         <span className="tooltip">Twitter</span>
                         <span><i className="fab fa-twitter"></i></span>
                     </li>
-                    <li className="icon instagram">
+                    <li className="iconito instagram">
                         <span className="tooltip">Instagram</span>
                         <span><i className="fab fa-instagram"></i></span>
                     </li>
